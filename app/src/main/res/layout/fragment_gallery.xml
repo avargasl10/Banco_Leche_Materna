@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.gallery.GalleryFragment">
+
+    <LinearLayout
+        android:id="@+id/textview6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="0dp"
+        android:paddingTop="0dp"
+        tools:context=".CrearActivity">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            tools:ignore="ScrollViewCount,UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_weight="4"
+                    tools:ignore="InefficientWeight,NestedWeights,UselessParent">
+
+                    <ImageView
+                        android:id="@+id/imgFondo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/fondo"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/fondoapp"
+                        tools:ignore="ImageContrastCheck" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imgLogo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:contentDescription="@string/logo"
+                            app:srcCompat="@drawable/logoapp"
+                            tools:ignore="ImageContrastCheck" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1681dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="12dp"
+                        tools:ignore="UselessParent">
+
+
+                        <TextView
+                            android:id="@+id/lblModificar"
+                            android:layout_width="384dp"
+                            android:layout_height="wrap_content"
+                            android:baselineAligned="true"
+                            android:padding="0dp"
+                            android:paddingLeft="20dp"
+                            android:paddingEnd="40dp"
+                            android:paddingRight="20dp"
+                            android:shadowColor="#03A9F4"
+                            android:text="@string/modificar2"
+                            android:textAlignment="center"
+                            android:textColor="#03A9F4"
+                            android:textSize="20sp"
+                            tools:ignore="RtlSymmetry,TextContrastCheck" />
+
+                        <TextView
+                            android:id="@+id/lblDocumento"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="15dp"
+                            android:paddingTop="20dp"
+                            android:shadowColor="#03A9F4"
+                            android:text="@string/numero_documento"
+                            android:textColor="#03A9F4"
+                            android:textSize="18sp"
+                            tools:ignore="RtlSymmetry,TextContrastCheck" />
+
+                        <EditText
+                            android:id="@+id/txtDocumento"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:paddingStart="15dp"
+                            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                        <TextView
+                            android:id="@+id/lblTipoDocumento"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="15dp"
+                            android:paddingTop="20dp"
+                            android:shadowColor="#03A9F4"
+                            android:text="@string/tipo_documento"
+                            android:textColor="#03A9F4"
+                            android:textSize="18sp"
+                            tools:ignore="RtlSymmetry,TextContrastCheck" />
+
+                        <EditText
+                            android:id="@+id/txtTipoDocumento"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:autofillHints=""
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:minHeight="48dp"
+                            android:paddingStart="15dp"
+                            android:textColor="@color/black"
+                            tools:ignore="LabelFor,RtlSymmetry,SpeakableTextPresentCheck" />
+
+                        <TextView
+                            android:id="@+id/lblDireccion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="15dp"
+                            android:paddingTop="20dp"
+                            android:shadowColor="#03A9F4"
+                            android:text="@string/direccion"
+                            android:textColor="#03A9F4"
+                            android:textSize="18sp"
+                            tools:ignore="RtlSymmetry,TextContrastCheck" />
+
+                        <EditText
+                            android:id="@+id/txtDireccion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:autofillHints=""
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:minHeight="48dp"
+                            android:paddingStart="15dp"
+                            android:textColor="@color/black"
+                            tools:ignore="LabelFor,RtlSymmetry,SpeakableTextPresentCheck" />
+
+                        <TextView
+                            android:id="@+id/lblCiudad"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="15dp"
+                            android:paddingLeft="40dp"
+                            android:paddingTop="20dp"
+                            android:shadowColor="#03A9F4"
+                            android:text="@string/ciudad"
+                            android:textColor="#03A9F4"
+                            android:textSize="18sp"
+                            tools:ignore="RtlSymmetry,TextContrastCheck" />
+
+                        <EditText
+                            android:id="@+id/txtCiudad"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="text"
+                            android:minHeight="48dp"
+                            android:paddingStart="15dp"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <TextView
+                            android:id="@+id/lblCelular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="15dp"
+                            android:paddingTop="20dp"
+                            android:shadowColor="#03A9F4"
+                            android:text="@string/celular"
+                            android:textColor="#03A9F4"
+                            android:textSize="18sp"
+                            tools:ignore="RtlSymmetry,TextContrastCheck" />
+
+                        <EditText
+                            android:id="@+id/txtCelular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="phone"
+                            android:minHeight="48dp"
+                            android:paddingStart="15dp"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <TextView
+                            android:id="@+id/lblFecha"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="15dp"
+                            android:paddingTop="20dp"
+                            android:shadowColor="#03A9F4"
+                            android:text="@string/fecha_nacimiento"
+                            android:textColor="#03A9F4"
+                            android:textSize="18sp"
+                            tools:ignore="RtlSymmetry,TextContrastCheck" />
+
+                        <EditText
+                            android:id="@+id/txtFecha"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="date"
+                            android:minHeight="48dp"
+                            android:paddingStart="15dp"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <TextView
+                            android:id="@+id/lblPeso"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="15dp"
+                            android:paddingTop="20dp"
+                            android:shadowColor="#03A9F4"
+                            android:text="@string/peso"
+                            android:textColor="#03A9F4"
+                            android:textSize="18sp"
+                            tools:ignore="RtlSymmetry,TextContrastCheck" />
+
+                        <EditText
+                            android:id="@+id/txtPeso"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="numberDecimal"
+                            android:paddingStart="15dp"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <TextView
+                            android:id="@+id/lblTalla"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="15dp"
+                            android:paddingTop="20dp"
+                            android:shadowColor="#03A9F4"
+                            android:text="@string/talla"
+                            android:textColor="#03A9F4"
+                            android:textSize="18sp"
+                            tools:ignore="RtlSymmetry,TextContrastCheck" />
+
+                        <EditText
+                            android:id="@+id/txtTalla"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="numberDecimal"
+                            android:paddingStart="15dp" />
+
+                        <TextView
+                            android:id="@+id/lblIMC"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="15dp"
+                            android:paddingTop="20dp"
+                            android:shadowColor="#03A9F4"
+                            android:text="@string/imc"
+                            android:textColor="#03A9F4"
+                            android:textSize="18sp"
+                            tools:ignore="RtlSymmetry,TextContrastCheck" />
+
+                        <EditText
+                            android:id="@+id/txtIMC"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="numberDecimal"
+                            android:paddingStart="15dp" />
+
+                        <TextView
+                            android:id="@+id/lblMedicamentos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="15dp"
+                            android:paddingTop="20dp"
+                            android:shadowColor="#03A9F4"
+                            android:text="@string/medicamentos"
+                            android:textColor="#03A9F4"
+                            android:textSize="18sp"
+                            tools:ignore="RtlSymmetry,TextContrastCheck" />
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:orientation="horizontal">
+
+
+                            <RadioButton
+                                android:id="@+id/rbtMedicamentosSi"
+                                android:layout_width="103dp"
+                                android:layout_height="wrap_content"
+                                android:text="Si" />
+
+                            <RadioButton
+                                android:id="@+id/rbtMedicamentosNo"
+                                android:layout_width="97dp"
+                                android:layout_height="wrap_content"
+                                android:text="No" />
+                        </RadioGroup>
+
+                        <TextView
+                            android:id="@+id/lblHabitos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="15dp"
+                            android:paddingTop="20dp"
+                            android:shadowColor="#03A9F4"
+                            android:text="@string/habitos"
+                            android:textColor="#03A9F4"
+                            android:textSize="18sp"
+                            tools:ignore="RtlSymmetry,TextContrastCheck" />
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="47dp"
+                            android:orientation="horizontal">
+
+
+                            <RadioButton
+                                android:id="@+id/rbtHabitosSi"
+                                android:layout_width="103dp"
+                                android:layout_height="wrap_content"
+                                android:text="Si" />
+
+                            <RadioButton
+                                android:id="@+id/rbtHabitosNo"
+                                android:layout_width="97dp"
+                                android:layout_height="wrap_content"
+                                android:text="No" />
+                        </RadioGroup>
+
+
+                        <TextView
+                            android:id="@+id/lblRegla"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="15dp"
+                            android:paddingTop="20dp"
+                            android:shadowColor="#03A9F4"
+                            android:text="@string/ultima_regla"
+                            android:textColor="#03A9F4"
+                            android:textSize="18sp"
+                            tools:ignore="RtlSymmetry,TextContrastCheck" />
+
+                        <EditText
+                            android:id="@+id/txtRegla"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="date"
+                            android:paddingStart="15dp" />
+
+                        <TextView
+                            android:id="@+id/lblParto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="15dp"
+                            android:paddingTop="20dp"
+                            android:shadowColor="#03A9F4"
+                            android:text="@string/fecha_parto"
+                            android:textColor="#03A9F4"
+                            android:textSize="18sp"
+                            tools:ignore="RtlSymmetry,TextContrastCheck" />
+
+                        <EditText
+                            android:id="@+id/txtParto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="date"
+                            android:paddingStart="15dp" />
+
+                        <TextView
+                            android:id="@+id/lblAmenorrea"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="15dp"
+                            android:paddingTop="20dp"
+                            android:shadowColor="#03A9F4"
+                            android:text="@string/edad_amenorrea"
+                            android:textColor="#03A9F4"
+                            android:textSize="18sp"
+                            tools:ignore="RtlSymmetry,TextContrastCheck" />
+
+                        <EditText
+                            android:id="@+id/editTextNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:paddingStart="15dp" />
+
+                        <TextView
+                            android:id="@+id/txtAmenorrea"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="15dp"
+                            android:paddingTop="20dp"
+                            android:shadowColor="#03A9F4"
+                            android:text="@string/patologia"
+                            android:textColor="#03A9F4"
+                            android:textSize="18sp"
+                            tools:ignore="RtlSymmetry,TextContrastCheck" />
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:orientation="horizontal">
+
+
+                            <RadioButton
+                                android:id="@+id/rbtPatologiaSi"
+                                android:layout_width="103dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/si" />
+
+                            <RadioButton
+                                android:id="@+id/rbtPatologiaNo"
+                                android:layout_width="97dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/no" />
+                        </RadioGroup>
+
+                        <EditText
+                            android:id="@+id/txtPatologia"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:paddingStart="15dp"
+                            android:text="@string/cual"
+                            android:textColor="#9A9999" />
+
+                        <Button
+                            android:id="@+id/btnAgregar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:backgroundTint="#03A9F4"
+                            android:text="@string/guardar"
+                            app:iconTint="#D18F1C"
+                            tools:ignore="TextContrastCheck" />
+
+                        <LinearLayout
+                            android:layout_width="386dp"
+                            android:layout_height="139dp"
+                            android:layout_weight="13"
+                            android:orientation="vertical"
+                            android:padding="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_marginLeft="50dp"
+                                android:layout_marginRight="50dp"
+                                android:background="#03A9F4"
+                                android:orientation="horizontal"
+                                android:padding="20dp"
+                                android:paddingTop="20dp">
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="90dp"
+                                android:orientation="vertical">
+
+                                <Button
+                                    android:id="@+id/btnNuevo"
+                                    android:layout_width="386dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:backgroundTint="#03A9F4"
+                                    android:text="@string/modificar_nuevo"
+                                    app:iconTint="#D18F1C"
+                                    tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

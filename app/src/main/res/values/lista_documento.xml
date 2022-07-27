@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="lista_documentos">
+        <item>Cédula de ciudadania</item>
+        <item>Cédula de extranjeria</item>
+        <item>Tarjeta de identidad</item>
+        <item>Pasaporte</item>
+    </string-array>
+</resources>
