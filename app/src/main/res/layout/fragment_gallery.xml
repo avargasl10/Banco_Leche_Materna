@@ -308,13 +308,13 @@
                                 android:id="@+id/rbtMedicamentosSi"
                                 android:layout_width="103dp"
                                 android:layout_height="wrap_content"
-                                android:text="Si" />
+                                android:text="@string/si" />
 
                             <RadioButton
                                 android:id="@+id/rbtMedicamentosNo"
                                 android:layout_width="97dp"
                                 android:layout_height="wrap_content"
-                                android:text="No" />
+                                android:text="@string/no" />
                         </RadioGroup>
 
                         <TextView
@@ -339,13 +339,13 @@
                                 android:id="@+id/rbtHabitosSi"
                                 android:layout_width="103dp"
                                 android:layout_height="wrap_content"
-                                android:text="Si" />
+                                android:text="@string/si" />
 
                             <RadioButton
                                 android:id="@+id/rbtHabitosNo"
                                 android:layout_width="97dp"
                                 android:layout_height="wrap_content"
-                                android:text="No" />
+                                android:text="@string/no" />
                         </RadioGroup>
 
 
@@ -445,9 +445,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:ems="10"
+                            android:hint="@string/cual"
                             android:inputType="textPersonName"
                             android:paddingStart="15dp"
-                            android:text="@string/cual"
                             android:textColor="#9A9999" />
 
                         <Button
@@ -461,8 +461,8 @@
                             tools:ignore="TextContrastCheck" />
 
                         <LinearLayout
-                            android:layout_width="386dp"
-                            android:layout_height="139dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_weight="13"
                             android:orientation="vertical"
                             android:padding="0dp">
@@ -470,7 +470,7 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="2dp"
-                                android:layout_marginLeft="50dp"
+                                android:layout_marginLeft="30dp"
                                 android:layout_marginRight="50dp"
                                 android:background="#03A9F4"
                                 android:orientation="horizontal"
@@ -481,12 +481,12 @@
 
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="90dp"
+                                android:layout_height="wrap_content"
                                 android:orientation="vertical">
 
                                 <Button
                                     android:id="@+id/btnNuevo"
-                                    android:layout_width="386dp"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
                                     android:backgroundTint="#03A9F4"
