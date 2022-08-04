@@ -24,7 +24,6 @@ public class MaestroAdapter extends ArrayAdapter<IMaestro> {
 
     public MaestroAdapter(@NonNull Context context, @NonNull List objects) {
         super(context, R.layout.spinner_row, 0, objects);
-
     }
 
     @Override

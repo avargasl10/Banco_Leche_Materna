@@ -135,6 +135,10 @@
                             android:textColor="@color/black"
                             tools:ignore="LabelFor,RtlSymmetry,SpeakableTextPresentCheck" />
 
+                        <Spinner android:id="@+id/spnTiposDocumento"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"></Spinner>
+
                         <TextView
                             android:id="@+id/lblDireccion"
                             android:layout_width="match_parent"
