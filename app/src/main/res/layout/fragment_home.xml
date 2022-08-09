@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
-
+    tools:context=".ui.slideshow.SlideshowFragment">
 
     <LinearLayout
         android:id="@+id/textview6"
@@ -27,7 +26,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-
 
                 <FrameLayout
                     android:layout_width="match_parent"
@@ -62,7 +60,7 @@
                 </FrameLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="1681dp"
                     android:orientation="vertical">
 
@@ -75,7 +73,7 @@
 
 
                         <TextView
-                            android:id="@+id/lblConsultar"
+                            android:id="@+id/lblModificar"
                             android:layout_width="384dp"
                             android:layout_height="wrap_content"
                             android:baselineAligned="true"
@@ -84,7 +82,7 @@
                             android:paddingEnd="40dp"
                             android:paddingRight="20dp"
                             android:shadowColor="#03A9F4"
-                            android:text="Consulte la información"
+                            android:text="Ingrese la información"
                             android:textAlignment="center"
                             android:textColor="#03A9F4"
                             android:textSize="20sp"
@@ -123,21 +121,12 @@
                             android:textSize="18sp"
                             tools:ignore="RtlSymmetry,TextContrastCheck" />
 
-                        <EditText
-                            android:id="@+id/txtTipoDocumento"
+                        <Spinner
+                            android:id="@+id/spnTiposDocumento"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:autofillHints=""
-                            android:ems="10"
-                            android:inputType="textPersonName"
                             android:minHeight="48dp"
-                            android:paddingStart="15dp"
-                            android:textColor="@color/black"
-                            tools:ignore="LabelFor,RtlSymmetry,SpeakableTextPresentCheck" />
-
-                        <Spinner android:id="@+id/spnTiposDocumento"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"></Spinner>
+                            android:spinnerMode="dialog"></Spinner>
 
                         <TextView
                             android:id="@+id/lblDireccion"
@@ -407,7 +396,7 @@
                             tools:ignore="RtlSymmetry,TextContrastCheck" />
 
                         <EditText
-                            android:id="@+id/editTextNumber"
+                            android:id="@+id/txtAmenorrea"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:ems="10"
@@ -415,7 +404,7 @@
                             android:paddingStart="15dp" />
 
                         <TextView
-                            android:id="@+id/txtAmenorrea"
+                            android:id="@+id/lblpatologia"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingStart="15dp"
@@ -450,10 +439,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:ems="10"
+                            android:hint="@string/cual"
                             android:inputType="textPersonName"
                             android:paddingStart="15dp"
-                            android:hint="@string/cual"
-                            android:textColor="#9A9999" />
+                            android:textColor="#000000" />
 
                         <Button
                             android:id="@+id/btnAgregar"
@@ -495,7 +484,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
                                     android:backgroundTint="#03A9F4"
-                                    android:text="@string/consultar_nuevo"
+                                    android:text="@string/ingresar_nuevo"
                                     app:iconTint="#D18F1C"
                                     tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
 
@@ -512,3 +501,4 @@
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
+

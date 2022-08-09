@@ -18,7 +18,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#03A9F4"
+            android:background="#0088F5"
             android:visibility="visible"
             app:popupTheme="@style/Theme.BancoDeLecheMaterna.PopupOverlay" />
 

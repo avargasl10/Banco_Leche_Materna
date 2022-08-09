@@ -32,14 +32,14 @@
     <string name="direccion">Dirección</string>
     <string name="ciudad">Ciudad</string>
     <string name="celular">Celular</string>
-    <string name="fecha_nacimiento">Fecha de nacimiento (dd/mm/aa)</string>
+    <string name="fecha_nacimiento">Fecha de nacimiento</string>
     <string name="peso">Peso</string>
     <string name="talla">Talla</string>
     <string name="imc">IMC</string>
     <string name="medicamentos">¿Usa medicamentos?</string>
     <string name="habitos">¿Hábitos tóxicos?</string>
-    <string name="ultima_regla">Fecha de última regla (dd/mm/aa)</string>
-    <string name="fecha_parto">Fecha de parto (dd/mm/aa)</string>
+    <string name="ultima_regla">Fecha de última regla</string>
+    <string name="fecha_parto">Fecha de parto</string>
     <string name="edad_amenorrea">Edad de amenorrea</string>
     <string name="patologia">¿Patología durante el embarazo?</string>
     <string name="si">Si</string>
@@ -50,4 +50,7 @@
     <string name="guardar">Guardar</string>
     <string name="modificar_nuevo">Modificar nuevo</string>
     <string name="consultar_nuevo">Consultar nuevo</string>
+    <string name="buscar">Buscar documento</string>
+    <string name="Bienvenido">welcome</string>
+    <string name="welcome">Bienvenido</string>
 </resources>

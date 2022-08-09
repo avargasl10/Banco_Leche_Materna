@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,6 +34,8 @@ import com.example.bancodelechematerna.repositorio.RepositorioMaestro;
 
 import com.example.bancodelechematerna.databinding.FragmentGalleryBinding;
 
+import java.time.Month;
+import java.util.Calendar;
 import java.util.List;
 
 public class GalleryFragment extends Fragment {
@@ -69,8 +73,128 @@ public class GalleryFragment extends Fragment {
 
         binding = FragmentGalleryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-        Button btnAgregar = binding.btnAgregar;
-        btnAgregar.setOnClickListener(new View.OnClickListener() {
+        TextView lblFecha= binding.lblFecha;
+        EditText txtFecha= binding.txtFecha;
+        Calendar calendar = Calendar.getInstance();
+        final int year = calendar.get(Calendar.YEAR);
+        final int month = calendar.get(Calendar.MONTH);
+        final int day = calendar.get(Calendar.DAY_OF_MONTH);
+        binding.txtFecha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatePickerDialog datePickerDialog= new DatePickerDialog(
+                        GalleryFragment.this.getContext(), setListener,year,month,day);
+                datePickerDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+                datePickerDialog.show();
+            }
+        });
+
+        setListener=new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                month=month+1;
+                String date= day+"/"+month+"/"+year;
+                binding.lblFecha.setText(date);
+            }
+        };
+        txtFecha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatePickerDialog datePickerDialog = new DatePickerDialog(
+                        GalleryFragment.this.getContext(),
+                        new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month, int day) {
+                        month=month+1;
+                        String date= day+"/"+month+"/"+year;
+                        binding.txtFecha.setText(date);
+                    }
+                },year,month,day);
+                datePickerDialog.show();
+            }
+        });
+
+        EditText txtRegla= binding.txtRegla;
+        Calendar calendar2 = Calendar.getInstance();
+        final int year2 = calendar.get(Calendar.YEAR);
+        final int month2 = calendar.get(Calendar.MONTH);
+        final int day2 = calendar.get(Calendar.DAY_OF_MONTH);
+        binding.txtFecha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatePickerDialog datePickerDialog= new DatePickerDialog(
+                        GalleryFragment.this.getContext(), setListener,year2,month2,day2);
+                datePickerDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+                datePickerDialog.show();
+            }
+        });
+
+        setListener=new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year2, int month2, int day2) {
+                month2=month2+1;
+                String date2= day2+"/"+month2+"/"+year2;
+                binding.lblFecha.setText(date2);
+            }
+        };
+        txtRegla.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatePickerDialog datePickerDialog = new DatePickerDialog(
+                        GalleryFragment.this.getContext(),
+                        new DatePickerDialog.OnDateSetListener() {
+                            @Override
+                            public void onDateSet(DatePicker view, int year2, int month2, int day2) {
+                                month2=month2+1;
+                                String date2= day2+"/"+month2+"/"+year2;
+                                binding.txtFecha.setText(date2);
+                            }
+                        },year2,month2,day2);
+                datePickerDialog.show();
+            }
+        });
+
+        EditText txtParto= binding.txtParto;
+        Calendar calendar3 = Calendar.getInstance();
+        final int year3 = calendar.get(Calendar.YEAR);
+        final int month3 = calendar.get(Calendar.MONTH);
+        final int day3 = calendar.get(Calendar.DAY_OF_MONTH);
+        binding.txtFecha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatePickerDialog datePickerDialog= new DatePickerDialog(
+                        GalleryFragment.this.getContext(), setListener,year3,month3,day3);
+                datePickerDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+                datePickerDialog.show();
+            }
+        });
+
+        setListener=new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year3, int month3, int day3) {
+                month3=month3+1;
+                String date3= day3+"/"+month3+"/"+year3;
+                binding.lblFecha.setText(date3);
+            }
+        };
+        txtParto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatePickerDialog datePickerDialog = new DatePickerDialog(
+                        GalleryFragment.this.getContext(),
+                        new DatePickerDialog.OnDateSetListener() {
+                            @Override
+                            public void onDateSet(DatePicker view, int year3, int month3, int day3) {
+                                month3=month3+1;
+                                String date3= day3+"/"+month3+"/"+year3;
+                                binding.txtFecha.setText(date3);
+                            }
+                        },year,month,day);
+                datePickerDialog.show();
+            }
+        });
+
+        binding.btnAgregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 guardarDatos();
@@ -78,7 +202,7 @@ public class GalleryFragment extends Fragment {
         });
         Spinner spnTiposDocumento =binding.spnTiposDocumento;
         tiposDocumento = RepositorioMaestro.obtenerTiposDocumento();
-        MaestroAdapter adapter = new MaestroAdapter(this, tiposDocumento);
+        MaestroAdapter adapter = new MaestroAdapter(this.getContext(), tiposDocumento);
         spnTiposDocumento.setAdapter(adapter);
         spnTiposDocumento.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -103,75 +227,86 @@ public class GalleryFragment extends Fragment {
 
     private void guardarDatos() {
         boolean error = false;
-        txtDocumento.setError(null);
-        if(txtDocumento.getText().toString().isEmpty())
+        binding.txtDocumento.setError(null);
+        if(binding.txtDocumento.getText().toString().isEmpty())
         {
-            txtDocumento.setError("Debe ingresar el # de documento");
+            binding.txtDocumento.setError("Debe ingresar el # de documento");
             error = true;
         }
-        if(txtDireccion.getText().toString().isEmpty())
+        if(binding.txtDireccion.getText().toString().isEmpty())
         {
-            txtDireccion.setError("Debe ingresar la dirección");
+            binding.txtDireccion.setError("Debe ingresar la dirección");
             error = true;
         }
         if(tipoDocumento == null)
         {
             error = true;
         }
-        if(txtCiudad.getText().toString().isEmpty())
+        if(binding.txtCiudad.getText().toString().isEmpty())
         {
-            txtCiudad.setError("Debe ingresar la ciudad");
+            binding.txtCiudad.setError("Debe ingresar la ciudad");
             error = true;
         }
-        if(txtCelular.getText().toString().isEmpty())
+        if(binding.txtCelular.getText().toString().isEmpty())
         {
-            txtCelular.setError("Debe ingresar el # celular");
+            binding.txtCelular.setError("Debe ingresar el # celular");
             error = true;
         }
-        if(txtFecha.getText().toString().isEmpty())
+        if(binding.txtFecha.getText().toString().isEmpty())
         {
-            txtFecha.setError("Debe ingresar la fecha de nacimiento");
+            binding.txtFecha.setError("Debe ingresar la fecha de nacimiento");
             error = true;
         }
-        if(txtPeso.getText().toString().isEmpty())
+        if(binding.txtPeso.getText().toString().isEmpty())
         {
-            txtPeso.setError("Debe ingresar el peso");
+            binding.txtPeso.setError("Debe ingresar el peso");
             error = true;
         }
-        if(txtTalla.getText().toString().isEmpty())
+        if(binding.txtTalla.getText().toString().isEmpty())
         {
-            txtTalla.setError("Debe ingresar la talla");
+            binding.txtTalla.setError("Debe ingresar la talla");
             error = true;
         }
-        if(txtIMC.getText().toString().isEmpty())
+        if(binding.txtIMC.getText().toString().isEmpty())
         {
-            txtIMC.setError("Debe ingresar el IMC");
+            binding.txtIMC.setError("Debe ingresar el IMC");
             error = true;
         }
-        if(txtRegla.getText().toString().isEmpty())
+        if(binding.txtRegla.getText().toString().isEmpty())
         {
-            txtRegla.setError("Debe ingresar la fecha de ultimia regla");
+            binding.txtRegla.setError("Debe ingresar la fecha de ultimia regla");
             error = true;
         }
-        if(txtParto.getText().toString().isEmpty())
+        if(binding.txtParto.getText().toString().isEmpty())
         {
-            txtParto.setError("Debe ingresar la fecha de parto");
+            binding.txtParto.setError("Debe ingresar la fecha de parto");
             error = true;
         }
-        if(txtAmenorrea.getText().toString().isEmpty())
+        if(binding.txtAmenorrea.getText().toString().isEmpty())
         {
-            txtAmenorrea.setError("Debe ingresar la edad de amenorrea");
+            binding.txtAmenorrea.setError("Debe ingresar la edad de amenorrea");
             error = true;
         }
-        if(txtPatologia.getText().toString().isEmpty() & rbtPatologiaSi.isChecked())
+        if(binding.txtPatologia.getText().toString().isEmpty() & binding.rbtPatologiaSi.isChecked())
         {
-            txtPatologia.setError("Debe ingresar la patología");
+            binding.txtPatologia.setError("Debe ingresar la patología");
             error = true;
         }
 
         if(error)  {
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            AlertDialog.Builder builder = new AlertDialog.Builder(this.getContext());
             builder.setMessage("Error al guardar los datos").
+                    setPositiveButton("Aceptar",
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                }
+                            });
+            builder.show();
+        }
+        else  {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this.getContext());
+            builder.setMessage("Se ha modificado los datos").
                     setPositiveButton("Aceptar",
                             new DialogInterface.OnClickListener() {
                                 @Override

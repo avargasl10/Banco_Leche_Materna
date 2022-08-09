@@ -16,7 +16,11 @@ public class RepositorioMaestro {
         ti.setId(2);
         ti.setNombre("Tarjeta de Identidad");
         tiposDocumento.add(ti);
+        IMaestro extranjero = new TipoDocumento();
+        extranjero.setId(2);
+        extranjero.setNombre("Cedula de extranjeria");
+        tiposDocumento.add(extranjero);
+
         return tiposDocumento;
     }
-
 }
